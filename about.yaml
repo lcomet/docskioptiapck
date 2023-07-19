@@ -1,0 +1,7 @@
+---
+name: kioptipack_schema
+author: Lina Molinas Comet <lina.teresa.molinas.comet@fit.fraunhofer.de>
+description: Documentation of the ontology and metamodels for the KIOptipack project
+source_schema_path: src/kioptipack_schema/schema/kioptipack_schema.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: personinfo enums
