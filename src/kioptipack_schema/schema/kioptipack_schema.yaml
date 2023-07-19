@@ -38,24 +38,13 @@ classes:
     is_a: NamedThing
     description: >-
       The material may contain one or more distinguish additives, recyclates or virgin materials.
-    slots:
-      - primary_email
-      - birth_date
-      - age_in_years
-      - vital_status
-    slot_usage:
-      primary_email:
-        pattern: "^\\S+@[\\S+\\.]+\\S+"
 
-  MaterialCollection:
-    tree_root: true
-    description: >-
-      A holder for Material objects
-    attributes:
-      entries:
-        range: Material
-        multivalued: true
-        inlined: true
+  Additive:
+    description: This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).
+    slots:
+      - name
+      - description
+    subclass_of: Material
 
 slots:
   id:

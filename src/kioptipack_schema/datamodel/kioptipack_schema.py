@@ -1,5 +1,5 @@
 # Auto generated from kioptipack_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-07-19T16:05:10
+# Generation date: 2023-07-19T17:22:40
 # Schema: kioptipack-schema
 #
 # id: https://w3id.org/Fraunhofer/kioptipack-schema
@@ -97,10 +97,6 @@ class Material(NamedThing):
     class_model_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.Material
 
     id: Union[str, MaterialId] = None
-    primary_email: Optional[str] = None
-    birth_date: Optional[Union[str, XSDDate]] = None
-    age_in_years: Optional[int] = None
-    vital_status: Optional[Union[str, "PersonStatus"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -108,37 +104,31 @@ class Material(NamedThing):
         if not isinstance(self.id, MaterialId):
             self.id = MaterialId(self.id)
 
-        if self.primary_email is not None and not isinstance(self.primary_email, str):
-            self.primary_email = str(self.primary_email)
-
-        if self.birth_date is not None and not isinstance(self.birth_date, XSDDate):
-            self.birth_date = XSDDate(self.birth_date)
-
-        if self.age_in_years is not None and not isinstance(self.age_in_years, int):
-            self.age_in_years = int(self.age_in_years)
-
-        if self.vital_status is not None and not isinstance(self.vital_status, PersonStatus):
-            self.vital_status = PersonStatus(self.vital_status)
-
         super().__post_init__(**kwargs)
 
 
 @dataclass
-class MaterialCollection(YAMLRoot):
+class Additive(YAMLRoot):
     """
-    A holder for Material objects
+    This class contain different sub classes to make additives more specific. In general, there are no instances of
+    this class, but from the subclass(es).
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.MaterialCollection
-    class_class_curie: ClassVar[str] = "kioptipack_schema:MaterialCollection"
-    class_name: ClassVar[str] = "MaterialCollection"
-    class_model_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.MaterialCollection
+    class_class_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.Additive
+    class_class_curie: ClassVar[str] = "kioptipack_schema:Additive"
+    class_name: ClassVar[str] = "Additive"
+    class_model_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.Additive
 
-    entries: Optional[Union[Dict[Union[str, MaterialId], Union[dict, Material]], List[Union[dict, Material]]]] = empty_dict()
+    name: Optional[str] = None
+    description: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        self._normalize_inlined_as_dict(slot_name="entries", slot_type=Material, key_name="id", keyed=True)
+        if self.name is not None and not isinstance(self.name, str):
+            self.name = str(self.name)
+
+        if self.description is not None and not isinstance(self.description, str):
+            self.description = str(self.description)
 
         super().__post_init__(**kwargs)
 
@@ -184,10 +174,3 @@ slots.age_in_years = Slot(uri=KIOPTIPACK_SCHEMA.age_in_years, name="age_in_years
 
 slots.vital_status = Slot(uri=KIOPTIPACK_SCHEMA.vital_status, name="vital_status", curie=KIOPTIPACK_SCHEMA.curie('vital_status'),
                    model_uri=KIOPTIPACK_SCHEMA.vital_status, domain=None, range=Optional[Union[str, "PersonStatus"]])
-
-slots.materialCollection__entries = Slot(uri=KIOPTIPACK_SCHEMA.entries, name="materialCollection__entries", curie=KIOPTIPACK_SCHEMA.curie('entries'),
-                   model_uri=KIOPTIPACK_SCHEMA.materialCollection__entries, domain=None, range=Optional[Union[Dict[Union[str, MaterialId], Union[dict, Material]], List[Union[dict, Material]]]])
-
-slots.Material_primary_email = Slot(uri=SCHEMA.email, name="Material_primary_email", curie=SCHEMA.curie('email'),
-                   model_uri=KIOPTIPACK_SCHEMA.Material_primary_email, domain=Material, range=Optional[str],
-                   pattern=re.compile(r'^\S+@[\S+\.]+\S+'))

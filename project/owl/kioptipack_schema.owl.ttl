@@ -10,10 +10,28 @@
 
 <https://w3id.org/Fraunhofer/kioptipack-schema> a owl:Ontology ;
     rdfs:label "kioptipack-schema" ;
-    IAO:0000700 kioptipack_schema:MaterialCollection,
+    IAO:0000700 kioptipack_schema:Additive,
         kioptipack_schema:NamedThing ;
     linkml:id "https://w3id.org/Fraunhofer/kioptipack-schema" ;
     linkml:imports "linkml:types" .
+
+kioptipack_schema:Material a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Material" ;
+    rdfs:subClassOf kioptipack_schema:NamedThing ;
+    skos:definition "The material may contain one or more distinguish additives, recyclates or virgin materials." .
+
+kioptipack_schema:age_in_years a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "age_in_years" ;
+    rdfs:range linkml:Integer ;
+    skos:definition "Number of years since birth" .
+
+kioptipack_schema:vital_status a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "vital_status" ;
+    rdfs:range kioptipack_schema:PersonStatus ;
+    skos:definition "living or dead status" .
 
 linkml:SubsetDefinition a owl:Class .
 
@@ -22,44 +40,12 @@ linkml:TypeDefinition a owl:Class .
 linkml:topValue a owl:DatatypeProperty ;
     rdfs:label "value" .
 
-kioptipack_schema:MaterialCollection a owl:Class,
-        linkml:ClassDefinition ;
-    rdfs:label "MaterialCollection" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom kioptipack_schema:Material ;
-            owl:onProperty kioptipack_schema:entries ] ;
-    skos:definition "A holder for Material objects" .
-
-kioptipack_schema:age_in_years a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "age_in_years" ;
-    rdfs:range linkml:Integer ;
-    skos:definition "Number of years since birth" .
-
-kioptipack_schema:entries a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "entries" ;
-    rdfs:range kioptipack_schema:Material .
-
-kioptipack_schema:vital_status a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "vital_status" ;
-    rdfs:range kioptipack_schema:PersonStatus ;
-    skos:definition "living or dead status" .
-
 schema1:birthDate a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "birth_date" ;
     rdfs:range linkml:Date ;
     skos:definition "Date on which a person is born" ;
     skos:exactMatch schema1:birthDate .
-
-schema1:description a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "description" ;
-    rdfs:range linkml:String ;
-    skos:definition "A human-readable description for a thing" ;
-    skos:exactMatch schema1:description .
 
 schema1:email a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -68,41 +54,25 @@ schema1:email a owl:ObjectProperty,
     skos:definition "The main email address of a person" ;
     skos:exactMatch schema1:email .
 
+kioptipack_schema:Additive a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Additive" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:description ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:name ] ;
+    skos:definition "This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es)." .
+
 schema1:identifier a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "id" ;
     rdfs:range linkml:Uriorcurie ;
     skos:definition "A unique identifier for a thing" ;
     skos:exactMatch schema1:identifier .
-
-schema1:name a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "name" ;
-    rdfs:range linkml:String ;
-    skos:definition "A human-readable name for a thing" ;
-    skos:exactMatch schema1:name .
-
-kioptipack_schema:Material a owl:Class,
-        linkml:ClassDefinition ;
-    rdfs:label "Material" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:email ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Date ;
-            owl:onProperty schema1:birthDate ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass kioptipack_schema:PersonStatus ;
-            owl:onProperty kioptipack_schema:vital_status ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty kioptipack_schema:age_in_years ],
-        kioptipack_schema:NamedThing ;
-    skos:definition "The material may contain one or more distinguish additives, recyclates or virgin materials." .
 
 kioptipack_schema:NamedThing a owl:Class,
         linkml:ClassDefinition ;
@@ -133,6 +103,20 @@ kioptipack_schema:NamedThing a owl:Class,
 <https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#UNKNOWN> a owl:Class,
         kioptipack_schema:PersonStatus ;
     rdfs:label "UNKNOWN" .
+
+schema1:description a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "description" ;
+    rdfs:range linkml:String ;
+    skos:definition "A human-readable description for a thing" ;
+    skos:exactMatch schema1:description .
+
+schema1:name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "name" ;
+    rdfs:range linkml:String ;
+    skos:definition "A human-readable name for a thing" ;
+    skos:exactMatch schema1:name .
 
 linkml:ClassDefinition a owl:Class .
 

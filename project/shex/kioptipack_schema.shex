@@ -43,21 +43,19 @@ linkml:Jsonpath xsd:string
 
 linkml:Sparqlpath xsd:string
 
-<Material> CLOSED {
-    (  $<Material_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema1:Thing ] ? ;
-          schema1:email @linkml:String ? ;
-          schema1:birthDate @linkml:Date ? ;
-          <age_in_years> @linkml:Integer ? ;
-          <vital_status> @<PersonStatus> ?
+<Additive> CLOSED {
+    (  $<Additive_tes> (  schema1:name @linkml:String ? ;
+          schema1:description @linkml:String ?
        ) ;
-       rdf:type [ <Material> ]
+       rdf:type [ <Additive> ] ?
     )
 }
 
-<MaterialCollection> CLOSED {
-    (  $<MaterialCollection_tes> <entries> @<Material> * ;
-       rdf:type [ <MaterialCollection> ] ?
+<Material> CLOSED {
+    (  $<Material_tes> (  &<NamedThing_tes> ;
+          rdf:type [ schema1:Thing ] ?
+       ) ;
+       rdf:type [ <Material> ]
     )
 }
 

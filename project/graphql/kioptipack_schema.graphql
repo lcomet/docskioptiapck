@@ -1,17 +1,14 @@
+type Additive
+  {
+    name: String
+    description: String
+  }
+
 type Material
   {
     id: Uriorcurie!
     name: String
     description: String
-    primaryEmail: String
-    birthDate: Date
-    ageInYears: Integer
-    vitalStatus: PersonStatus
-  }
-
-type MaterialCollection
-  {
-    entries: [Material]
   }
 
 type NamedThing

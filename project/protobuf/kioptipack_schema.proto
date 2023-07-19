@@ -1,18 +1,15 @@
+// This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).
+message Additive
+ {
+  string name = 0
+  string description = 0
+ }
 // The material may contain one or more distinguish additives, recyclates or virgin materials.
 message Material
  {
   uriorcurie id = 0
   string name = 0
   string description = 0
-  string primaryEmail = 0
-  date birthDate = 0
-  integer ageInYears = 0
-  personStatus vitalStatus = 0
- }
-// A holder for Material objects
-message MaterialCollection
- {
- repeated  material entries = 0
  }
 // A generic grouping for any identifiable entity
 message NamedThing
