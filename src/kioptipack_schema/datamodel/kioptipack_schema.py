@@ -1,5 +1,5 @@
 # Auto generated from kioptipack_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-07-19T17:22:40
+# Generation date: 2023-07-19T17:32:56
 # Schema: kioptipack-schema
 #
 # id: https://w3id.org/Fraunhofer/kioptipack-schema
@@ -50,6 +50,18 @@ class NamedThingId(URIorCURIE):
 
 
 class MaterialId(NamedThingId):
+    pass
+
+
+class AdditiveId(MaterialId):
+    pass
+
+
+class RecyclateId(MaterialId):
+    pass
+
+
+class VirginMaterialId(MaterialId):
     pass
 
 
@@ -108,7 +120,7 @@ class Material(NamedThing):
 
 
 @dataclass
-class Additive(YAMLRoot):
+class Additive(Material):
     """
     This class contain different sub classes to make additives more specific. In general, there are no instances of
     this class, but from the subclass(es).
@@ -120,10 +132,80 @@ class Additive(YAMLRoot):
     class_name: ClassVar[str] = "Additive"
     class_model_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.Additive
 
+    id: Union[str, AdditiveId] = None
     name: Optional[str] = None
     description: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, AdditiveId):
+            self.id = AdditiveId(self.id)
+
+        if self.name is not None and not isinstance(self.name, str):
+            self.name = str(self.name)
+
+        if self.description is not None and not isinstance(self.description, str):
+            self.description = str(self.description)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class Recyclate(Material):
+    """
+    This class contain different sub classes to make additives more specific. In general, there are no instances of
+    this class, but from the subclass(es).
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.Recyclate
+    class_class_curie: ClassVar[str] = "kioptipack_schema:Recyclate"
+    class_name: ClassVar[str] = "Recyclate"
+    class_model_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.Recyclate
+
+    id: Union[str, RecyclateId] = None
+    name: Optional[str] = None
+    description: Optional[str] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, RecyclateId):
+            self.id = RecyclateId(self.id)
+
+        if self.name is not None and not isinstance(self.name, str):
+            self.name = str(self.name)
+
+        if self.description is not None and not isinstance(self.description, str):
+            self.description = str(self.description)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class VirginMaterial(Material):
+    """
+    Virgin materials are all materials, which contain only one kind of material. You should be able, to describe this
+    material with one chemical structure/molecule.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.VirginMaterial
+    class_class_curie: ClassVar[str] = "kioptipack_schema:VirginMaterial"
+    class_name: ClassVar[str] = "Virgin Material"
+    class_model_uri: ClassVar[URIRef] = KIOPTIPACK_SCHEMA.VirginMaterial
+
+    id: Union[str, VirginMaterialId] = None
+    name: Optional[str] = None
+    description: Optional[str] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, VirginMaterialId):
+            self.id = VirginMaterialId(self.id)
+
         if self.name is not None and not isinstance(self.name, str):
             self.name = str(self.name)
 

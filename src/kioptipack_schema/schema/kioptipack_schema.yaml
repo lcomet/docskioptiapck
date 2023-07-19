@@ -44,7 +44,21 @@ classes:
     slots:
       - name
       - description
-    subclass_of: Material
+    is_a: Material
+    
+  Recyclate:
+    description: This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).
+    slots:
+      - name
+      - description
+    is_a: Material
+    
+  Virgin Material:
+    description: Virgin materials are all materials, which contain only one kind of material. You should be able, to describe this material with one chemical structure/molecule.
+    slots:
+      - name
+      - description
+    is_a: Material
 
 slots:
   id:

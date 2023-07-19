@@ -8,11 +8,18 @@
                     "description": "A human-readable description for a thing",
                     "type": "string"
                 },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
                 "name": {
                     "description": "A human-readable name for a thing",
                     "type": "string"
                 }
             },
+            "required": [
+                "id"
+            ],
             "title": "Additive",
             "type": "object"
         },
@@ -71,6 +78,52 @@
             ],
             "title": "PersonStatus",
             "type": "string"
+        },
+        "Recyclate": {
+            "additionalProperties": false,
+            "description": "This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).",
+            "properties": {
+                "description": {
+                    "description": "A human-readable description for a thing",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Recyclate",
+            "type": "object"
+        },
+        "VirginMaterial": {
+            "additionalProperties": false,
+            "description": "Virgin materials are all materials, which contain only one kind of material. You should be able, to describe this material with one chemical structure/molecule.",
+            "properties": {
+                "description": {
+                    "description": "A human-readable description for a thing",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "VirginMaterial",
+            "type": "object"
         }
     },
     "$id": "https://w3id.org/Fraunhofer/kioptipack-schema",

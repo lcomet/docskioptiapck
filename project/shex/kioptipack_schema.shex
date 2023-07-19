@@ -44,20 +44,22 @@ linkml:Jsonpath xsd:string
 linkml:Sparqlpath xsd:string
 
 <Additive> CLOSED {
-    (  $<Additive_tes> (  schema1:name @linkml:String ? ;
-          schema1:description @linkml:String ?
+    (  $<Additive_tes> (  &<Material_tes> ;
+          rdf:type [ <Material> ] ?
        ) ;
-       rdf:type [ <Additive> ] ?
+       rdf:type [ <Additive> ]
     )
 }
 
-<Material> CLOSED {
-    (  $<Material_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema1:Thing ] ?
-       ) ;
-       rdf:type [ <Material> ]
-    )
-}
+<Material>  (
+    CLOSED {
+       (  $<Material_tes> (  &<NamedThing_tes> ;
+             rdf:type [ schema1:Thing ] ?
+          ) ;
+          rdf:type [ <Material> ]
+       )
+    } OR @<Additive> OR @<Recyclate> OR @<VirginMaterial>
+)
 
 <NamedThing>  (
     CLOSED {
@@ -68,5 +70,21 @@ linkml:Sparqlpath xsd:string
        )
     } OR @<Material>
 )
+
+<Recyclate> CLOSED {
+    (  $<Recyclate_tes> (  &<Material_tes> ;
+          rdf:type [ <Material> ] ?
+       ) ;
+       rdf:type [ <Recyclate> ]
+    )
+}
+
+<VirginMaterial> CLOSED {
+    (  $<VirginMaterial_tes> (  &<Material_tes> ;
+          rdf:type [ <Material> ] ?
+       ) ;
+       rdf:type [ <VirginMaterial> ]
+    )
+}
 
 

@@ -1,5 +1,6 @@
 type Additive
   {
+    id: Uriorcurie!
     name: String
     description: String
   }
@@ -12,6 +13,20 @@ type Material
   }
 
 type NamedThing
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+  }
+
+type Recyclate
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+  }
+
+type VirginMaterial
   {
     id: Uriorcurie!
     name: String

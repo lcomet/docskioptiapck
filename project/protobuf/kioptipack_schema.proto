@@ -1,6 +1,7 @@
 // This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).
 message Additive
  {
+  uriorcurie id = 0
   string name = 0
   string description = 0
  }
@@ -13,6 +14,20 @@ message Material
  }
 // A generic grouping for any identifiable entity
 message NamedThing
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ }
+// This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).
+message Recyclate
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ }
+// Virgin materials are all materials, which contain only one kind of material. You should be able, to describe this material with one chemical structure/molecule.
+message VirginMaterial
  {
   uriorcurie id = 0
   string name = 0

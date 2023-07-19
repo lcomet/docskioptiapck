@@ -355,10 +355,12 @@
         "http://schema.org/name"
       ],
       "slot_uri": "http://schema.org/name",
-      "owner": "Additive",
+      "owner": "VirginMaterial",
       "domain_of": [
         "NamedThing",
-        "Additive"
+        "Additive",
+        "Recyclate",
+        "VirginMaterial"
       ],
       "range": "string",
       "@type": "SlotDefinition"
@@ -372,10 +374,12 @@
         "http://schema.org/description"
       ],
       "slot_uri": "http://schema.org/description",
-      "owner": "Additive",
+      "owner": "VirginMaterial",
       "domain_of": [
         "NamedThing",
-        "Additive"
+        "Additive",
+        "Recyclate",
+        "VirginMaterial"
       ],
       "range": "string",
       "@type": "SlotDefinition"
@@ -461,21 +465,52 @@
       "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Additive",
       "description": "This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).",
       "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "is_a": "Material",
       "slots": [
+        "id",
         "name",
         "description"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Additive",
-      "subclass_of": "Material",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Recyclate",
+      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Recyclate",
+      "description": "This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).",
+      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "is_a": "Material",
+      "slots": [
+        "id",
+        "name",
+        "description"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Recyclate",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "VirginMaterial",
+      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/VirginMaterial",
+      "description": "Virgin materials are all materials, which contain only one kind of material. You should be able, to describe this material with one chemical structure/molecule.",
+      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "is_a": "Material",
+      "slots": [
+        "id",
+        "name",
+        "description"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/VirginMaterial",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "kioptipack_schema.yaml",
-  "source_file_date": "2023-07-19T17:22:30",
-  "source_file_size": 2290,
-  "generation_date": "2023-07-19T17:22:35",
+  "source_file_date": "2023-07-19T17:32:43",
+  "source_file_size": 2797,
+  "generation_date": "2023-07-19T17:32:50",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/kioptipack_schema.context.jsonld",
