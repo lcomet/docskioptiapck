@@ -2,7 +2,7 @@
     "$defs": {
         "Material": {
             "additionalProperties": false,
-            "description": "Represents a Material",
+            "description": "The material may contain one or more distinguish additives, recyclates or virgin materials.",
             "properties": {
                 "age_in_years": {
                     "description": "Number of years since birth",
@@ -64,7 +64,7 @@
         },
         "Material__identifier_optional": {
             "additionalProperties": false,
-            "description": "Represents a Material",
+            "description": "The material may contain one or more distinguish additives, recyclates or virgin materials.",
             "properties": {
                 "age_in_years": {
                     "description": "Number of years since birth",

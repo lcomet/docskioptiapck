@@ -1,4 +1,4 @@
-// Represents a Material
+// The material may contain one or more distinguish additives, recyclates or virgin materials.
 message Material
  {
   uriorcurie id = 0

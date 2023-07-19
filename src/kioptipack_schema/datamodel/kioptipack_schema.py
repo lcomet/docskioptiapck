@@ -1,5 +1,5 @@
 # Auto generated from kioptipack_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-07-19T10:36:43
+# Generation date: 2023-07-19T16:05:10
 # Schema: kioptipack-schema
 #
 # id: https://w3id.org/Fraunhofer/kioptipack-schema
@@ -31,12 +31,14 @@ version = None
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-PATO = CurieNamespace('PATO', 'http://purl.obolibrary.org/obo/PATO_')
-BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
-EXAMPLE = CurieNamespace('example', 'https://example.org/')
 KIOPTIPACK_SCHEMA = CurieNamespace('kioptipack_schema', 'https://w3id.org/Fraunhofer/kioptipack-schema/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
+OWL = CurieNamespace('owl', 'http://www.w3.org/2002/07/owl#')
+RDF = CurieNamespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')
+XML = CurieNamespace('xml', 'http://www.w3.org/XML/1998/namespace')
+XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
 DEFAULT_ = KIOPTIPACK_SCHEMA
 
 
@@ -85,7 +87,7 @@ class NamedThing(YAMLRoot):
 @dataclass
 class Material(NamedThing):
     """
-    Represents a Material
+    The material may contain one or more distinguish additives, recyclates or virgin materials.
     """
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -146,12 +148,10 @@ class PersonStatus(EnumDefinitionImpl):
 
     ALIVE = PermissibleValue(
         text="ALIVE",
-        description="the person is living",
-        meaning=PATO["0001421"])
+        description="the person is living")
     DEAD = PermissibleValue(
         text="DEAD",
-        description="the person is deceased",
-        meaning=PATO["0001422"])
+        description="the person is deceased")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="the vital status is not known")

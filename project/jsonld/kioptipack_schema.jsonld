@@ -20,20 +20,28 @@
       "prefix_reference": "https://w3id.org/linkml/"
     },
     {
-      "prefix_prefix": "biolink",
-      "prefix_reference": "https://w3id.org/biolink/"
-    },
-    {
       "prefix_prefix": "schema",
       "prefix_reference": "http://schema.org/"
     },
     {
-      "prefix_prefix": "PATO",
-      "prefix_reference": "http://purl.obolibrary.org/obo/PATO_"
+      "prefix_prefix": "owl",
+      "prefix_reference": "http://www.w3.org/2002/07/owl#"
     },
     {
-      "prefix_prefix": "example",
-      "prefix_reference": "https://example.org/"
+      "prefix_prefix": "rdf",
+      "prefix_reference": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    {
+      "prefix_prefix": "xml",
+      "prefix_reference": "http://www.w3.org/XML/1998/namespace"
+    },
+    {
+      "prefix_prefix": "xsd",
+      "prefix_reference": "http://www.w3.org/2001/XMLSchema#"
+    },
+    {
+      "prefix_prefix": "rdfs",
+      "prefix_reference": "http://www.w3.org/2000/01/rdf-schema#"
     }
   ],
   "default_prefix": "kioptipack_schema",
@@ -303,13 +311,11 @@
       "permissible_values": [
         {
           "text": "ALIVE",
-          "description": "the person is living",
-          "meaning": "PATO:0001421"
+          "description": "the person is living"
         },
         {
           "text": "DEAD",
-          "description": "the person is deceased",
-          "meaning": "PATO:0001422"
+          "description": "the person is deceased"
         },
         {
           "text": "UNKNOWN",
@@ -488,7 +494,7 @@
     {
       "name": "Material",
       "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Material",
-      "description": "Represents a Material",
+      "description": "The material may contain one or more distinguish additives, recyclates or virgin materials.",
       "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
       "is_a": "NamedThing",
       "slots": [
@@ -529,9 +535,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "kioptipack_schema.yaml",
-  "source_file_date": "2023-07-19T09:48:32",
-  "source_file_size": 2296,
-  "generation_date": "2023-07-19T10:36:38",
+  "source_file_date": "2023-07-19T16:04:48",
+  "source_file_size": 2412,
+  "generation_date": "2023-07-19T16:05:05",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/kioptipack_schema.context.jsonld",
