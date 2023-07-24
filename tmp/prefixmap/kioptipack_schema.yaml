@@ -1,0 +1,13 @@
+{
+   "kioptipack_schema": "https://w3id.org/Fraunhofer/kioptipack-schema/",
+   "linkml": "https://w3id.org/linkml/",
+   "owl": "http://www.w3.org/2002/07/owl#",
+   "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+   "schema": "http://schema.org/",
+   "xml": "http://www.w3.org/XML/1998/namespace",
+   "xsd": "http://www.w3.org/2001/XMLSchema#",
+   "NamedThing": {
+      "@id": "schema:Thing"
+   }
+}
