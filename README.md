@@ -4,7 +4,7 @@ Documentation of the ontology and metamodels for the KIOptipack project
 
 ## Website
 
-[https://Fraunhofer.github.io/kioptipack-schema](https://Fraunhofer.github.io/kioptipack-schema)
+[https://lcomet.github.io/docskioptiapck/](https://lcomet.github.io/docskioptiapck/)
 
 ## Repository Structure
 
