@@ -1,5 +1,5 @@
 @prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
-@prefix kioptipack_schema: <https://w3id.org/Fraunhofer/kioptipack-schema/> .
+@prefix kioptipack_schema: <https://lcomet.github.io/docskioptiapck/> .
 @prefix linkml: <https://w3id.org/linkml/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,10 +8,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/Fraunhofer/kioptipack-schema> a owl:Ontology ;
+kioptipack_schema: a owl:Ontology ;
     rdfs:label "kioptipack-schema" ;
     IAO:0000700 kioptipack_schema:NamedThing ;
-    linkml:id "https://w3id.org/Fraunhofer/kioptipack-schema" ;
+    linkml:id "https://lcomet.github.io/docskioptiapck/" ;
     linkml:imports "linkml:types" .
 
 kioptipack_schema:Additive a owl:Class,
@@ -92,27 +92,27 @@ kioptipack_schema:NamedThing a owl:Class,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
+            owl:onProperty schema1:description ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
             owl:onProperty schema1:name ],
         [ a owl:Restriction ;
             owl:onClass linkml:Uriorcurie ;
             owl:onProperty schema1:identifier ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:description ] ;
+            owl:qualifiedCardinality 1 ] ;
     skos:definition "A generic grouping for any identifiable entity" ;
     skos:exactMatch schema1:Thing .
 
-<https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#ALIVE> a owl:Class,
+<https://lcomet.github.io/docskioptiapck/PersonStatus#ALIVE> a owl:Class,
         kioptipack_schema:PersonStatus ;
     rdfs:label "ALIVE" .
 
-<https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#DEAD> a owl:Class,
+<https://lcomet.github.io/docskioptiapck/PersonStatus#DEAD> a owl:Class,
         kioptipack_schema:PersonStatus ;
     rdfs:label "DEAD" .
 
-<https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#UNKNOWN> a owl:Class,
+<https://lcomet.github.io/docskioptiapck/PersonStatus#UNKNOWN> a owl:Class,
         kioptipack_schema:PersonStatus ;
     rdfs:label "UNKNOWN" .
 
@@ -125,10 +125,10 @@ kioptipack_schema:Material a owl:Class,
 kioptipack_schema:PersonStatus a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "PersonStatus" ;
-    owl:unionOf ( <https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#ALIVE> <https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#DEAD> <https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#UNKNOWN> ) ;
-    linkml:permissible_values <https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#ALIVE>,
-        <https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#DEAD>,
-        <https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus#UNKNOWN> .
+    owl:unionOf ( <https://lcomet.github.io/docskioptiapck/PersonStatus#ALIVE> <https://lcomet.github.io/docskioptiapck/PersonStatus#DEAD> <https://lcomet.github.io/docskioptiapck/PersonStatus#UNKNOWN> ) ;
+    linkml:permissible_values <https://lcomet.github.io/docskioptiapck/PersonStatus#ALIVE>,
+        <https://lcomet.github.io/docskioptiapck/PersonStatus#DEAD>,
+        <https://lcomet.github.io/docskioptiapck/PersonStatus#UNKNOWN> .
 
 linkml:ClassDefinition a owl:Class .
 

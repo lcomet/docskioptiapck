@@ -3,9 +3,9 @@
   "description": "Documentation of the ontology and metamodels for the KIOptipack project",
   "title": "kioptipack-schema",
   "see_also": [
-    "https://Fraunhofer.github.io/kioptipack-schema"
+    "https://lcomet.github.io/docskioptiapck/"
   ],
-  "id": "https://w3id.org/Fraunhofer/kioptipack-schema",
+  "id": "https://lcomet.github.io/docskioptiapck/",
   "imports": [
     "linkml:types"
   ],
@@ -13,7 +13,7 @@
   "prefixes": [
     {
       "prefix_prefix": "kioptipack_schema",
-      "prefix_reference": "https://w3id.org/Fraunhofer/kioptipack-schema/"
+      "prefix_reference": "https://lcomet.github.io/docskioptiapck/"
     },
     {
       "prefix_prefix": "linkml",
@@ -306,8 +306,8 @@
   "enums": [
     {
       "name": "PersonStatus",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/PersonStatus",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/PersonStatus",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "permissible_values": [
         {
           "text": "ALIVE",
@@ -330,9 +330,9 @@
   "slots": [
     {
       "name": "id",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/id",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/id",
       "description": "A unique identifier for a thing",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "mappings": [
         "http://schema.org/identifier"
       ],
@@ -348,9 +348,9 @@
     },
     {
       "name": "name",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/name",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/name",
       "description": "A human-readable name for a thing",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "mappings": [
         "http://schema.org/name"
       ],
@@ -367,9 +367,9 @@
     },
     {
       "name": "description",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/description",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/description",
       "description": "A human-readable description for a thing",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "mappings": [
         "http://schema.org/description"
       ],
@@ -386,9 +386,9 @@
     },
     {
       "name": "primary_email",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/primary_email",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/primary_email",
       "description": "The main email address of a person",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "mappings": [
         "http://schema.org/email"
       ],
@@ -398,9 +398,9 @@
     },
     {
       "name": "birth_date",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/birth_date",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/birth_date",
       "description": "Date on which a person is born",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "mappings": [
         "http://schema.org/birthDate"
       ],
@@ -410,19 +410,19 @@
     },
     {
       "name": "age_in_years",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/age_in_years",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/age_in_years",
       "description": "Number of years since birth",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
-      "slot_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/age_in_years",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
+      "slot_uri": "https://lcomet.github.io/docskioptiapck/age_in_years",
       "range": "integer",
       "@type": "SlotDefinition"
     },
     {
       "name": "vital_status",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/vital_status",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/vital_status",
       "description": "living or dead status",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
-      "slot_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/vital_status",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
+      "slot_uri": "https://lcomet.github.io/docskioptiapck/vital_status",
       "range": "PersonStatus",
       "@type": "SlotDefinition"
     }
@@ -430,9 +430,9 @@
   "classes": [
     {
       "name": "NamedThing",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/NamedThing",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/NamedThing",
       "description": "A generic grouping for any identifiable entity",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "mappings": [
         "schema:Thing"
       ],
@@ -447,9 +447,9 @@
     },
     {
       "name": "Material",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Material",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/Material",
       "description": "The material may contain one or more distinguish additives, recyclates or virgin materials.",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "is_a": "NamedThing",
       "slots": [
         "id",
@@ -457,14 +457,14 @@
         "description"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Material",
+      "class_uri": "https://lcomet.github.io/docskioptiapck/Material",
       "@type": "ClassDefinition"
     },
     {
       "name": "Additive",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Additive",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/Additive",
       "description": "This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "is_a": "Material",
       "slots": [
         "id",
@@ -472,14 +472,14 @@
         "description"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Additive",
+      "class_uri": "https://lcomet.github.io/docskioptiapck/Additive",
       "@type": "ClassDefinition"
     },
     {
       "name": "Recyclate",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Recyclate",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/Recyclate",
       "description": "This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "is_a": "Material",
       "slots": [
         "id",
@@ -487,14 +487,14 @@
         "description"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/Recyclate",
+      "class_uri": "https://lcomet.github.io/docskioptiapck/Recyclate",
       "@type": "ClassDefinition"
     },
     {
       "name": "VirginMaterial",
-      "definition_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/VirginMaterial",
+      "definition_uri": "https://lcomet.github.io/docskioptiapck/VirginMaterial",
       "description": "Virgin materials are all materials, which contain only one kind of material. You should be able, to describe this material with one chemical structure/molecule.",
-      "from_schema": "https://w3id.org/Fraunhofer/kioptipack-schema",
+      "from_schema": "https://lcomet.github.io/docskioptiapck/",
       "is_a": "Material",
       "slots": [
         "id",
@@ -502,21 +502,21 @@
         "description"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/Fraunhofer/kioptipack-schema/VirginMaterial",
+      "class_uri": "https://lcomet.github.io/docskioptiapck/VirginMaterial",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "kioptipack_schema.yaml",
-  "source_file_date": "2023-07-24T16:24:14",
-  "source_file_size": 2797,
-  "generation_date": "2023-07-24T16:25:23",
+  "source_file_date": "2023-07-24T16:39:50",
+  "source_file_size": 2772,
+  "generation_date": "2023-07-24T16:49:46",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/kioptipack_schema.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     {
-      "@base": "https://w3id.org/Fraunhofer/kioptipack-schema/"
+      "@base": "https://lcomet.github.io/docskioptiapck/"
     }
   ]
 }

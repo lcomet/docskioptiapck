@@ -1,8 +1,8 @@
 # Auto generated from kioptipack_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-07-24T16:25:30
+# Generation date: 2023-07-24T16:49:53
 # Schema: kioptipack-schema
 #
-# id: https://w3id.org/Fraunhofer/kioptipack-schema
+# id: https://lcomet.github.io/docskioptiapck/
 # description: Documentation of the ontology and metamodels for the KIOptipack project
 # license: Apache Software License 2.0
 
@@ -31,7 +31,7 @@ version = None
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-KIOPTIPACK_SCHEMA = CurieNamespace('kioptipack_schema', 'https://w3id.org/Fraunhofer/kioptipack-schema/')
+KIOPTIPACK_SCHEMA = CurieNamespace('kioptipack_schema', 'https://lcomet.github.io/docskioptiapck/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 OWL = CurieNamespace('owl', 'http://www.w3.org/2002/07/owl#')
 RDF = CurieNamespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')

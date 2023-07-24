@@ -1,5 +1,5 @@
 {
-   "kioptipack_schema": "https://w3id.org/Fraunhofer/kioptipack-schema/",
+   "kioptipack_schema": "https://lcomet.github.io/docskioptiapck/",
    "linkml": "https://w3id.org/linkml/",
    "owl": "http://www.w3.org/2002/07/owl#",
    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
