@@ -61,11 +61,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://lcomet.github.io/docskioptiapck/MaterialCollection/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://lcomet.github.io/docskioptiapck/NamedThing/</loc>
          <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
@@ -137,11 +132,6 @@
     </url>
     <url>
          <loc>https://lcomet.github.io/docskioptiapck/description/</loc>
-         <lastmod>2023-07-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://lcomet.github.io/docskioptiapck/entries/</loc>
          <lastmod>2023-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
