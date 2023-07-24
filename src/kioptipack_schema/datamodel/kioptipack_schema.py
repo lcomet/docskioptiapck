@@ -1,5 +1,5 @@
 # Auto generated from kioptipack_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-07-24T12:33:22
+# Generation date: 2023-07-24T12:34:34
 # Schema: kioptipack-schema
 #
 # id: https://w3id.org/Fraunhofer/kioptipack-schema

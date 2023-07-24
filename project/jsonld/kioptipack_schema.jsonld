@@ -510,7 +510,7 @@
   "source_file": "kioptipack_schema.yaml",
   "source_file_date": "2023-07-19T17:32:43",
   "source_file_size": 2797,
-  "generation_date": "2023-07-24T12:33:15",
+  "generation_date": "2023-07-24T12:34:26",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/kioptipack_schema.context.jsonld",

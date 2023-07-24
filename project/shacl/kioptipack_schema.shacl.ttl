@@ -8,25 +8,29 @@ schema1:Thing a sh:NodeShape ;
     sh:closed true ;
     sh:description "A generic grouping for any identifiable entity" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable description for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path schema1:description ],
-        [ sh:description "A unique identifier for a thing" ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
             sh:order 0 ;
             sh:path schema1:identifier ],
         [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
             sh:order 1 ;
-            sh:path schema1:name ] ;
+            sh:path schema1:name ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path schema1:description ] ;
     sh:targetClass schema1:Thing .
 
 kioptipack_schema:Additive a sh:NodeShape ;
     sh:closed true ;
     sh:description "This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es)." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable name for a thing" ;
+    sh:property [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema1:description ],
+        [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
             sh:order 0 ;
             sh:path schema1:name ],
@@ -34,30 +38,26 @@ kioptipack_schema:Additive a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 2 ;
-            sh:path schema1:identifier ],
-        [ sh:description "A human-readable description for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path schema1:description ] ;
+            sh:path schema1:identifier ] ;
     sh:targetClass kioptipack_schema:Additive .
 
 kioptipack_schema:Material a sh:NodeShape ;
     sh:closed true ;
     sh:description "The material may contain one or more distinguish additives, recyclates or virgin materials." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "A human-readable name for a thing" ;
+    sh:property [ sh:description "A unique identifier for a thing" ;
             sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path schema1:name ],
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path schema1:identifier ],
         [ sh:description "A human-readable description for a thing" ;
             sh:maxCount 1 ;
             sh:order 2 ;
             sh:path schema1:description ],
-        [ sh:description "A unique identifier for a thing" ;
+        [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 0 ;
-            sh:path schema1:identifier ] ;
+            sh:order 1 ;
+            sh:path schema1:name ] ;
     sh:targetClass kioptipack_schema:Material .
 
 kioptipack_schema:Recyclate a sh:NodeShape ;
@@ -69,14 +69,14 @@ kioptipack_schema:Recyclate a sh:NodeShape ;
             sh:minCount 1 ;
             sh:order 2 ;
             sh:path schema1:identifier ],
-        [ sh:description "A human-readable description for a thing" ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path schema1:description ],
         [ sh:description "A human-readable name for a thing" ;
             sh:maxCount 1 ;
             sh:order 0 ;
-            sh:path schema1:name ] ;
+            sh:path schema1:name ],
+        [ sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path schema1:description ] ;
     sh:targetClass kioptipack_schema:Recyclate .
 
 kioptipack_schema:VirginMaterial a sh:NodeShape ;
