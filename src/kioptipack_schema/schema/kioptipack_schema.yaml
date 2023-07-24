@@ -1,15 +1,15 @@
 ---
-id: https://w3id.org/Fraunhofer/kioptipack-schema
+id: https://lcomet.github.io/docskioptiapck/
 name: kioptipack-schema
 title: kioptipack-schema
 description: |-
   Documentation of the ontology and metamodels for the KIOptipack project
 license: Apache Software License 2.0
 see_also:
-  - https://Fraunhofer.github.io/kioptipack-schema
+  - https://lcomet.github.io/docskioptiapck/
 
 prefixes:
-  kioptipack_schema: https://w3id.org/Fraunhofer/kioptipack-schema/
+  kioptipack_schema: https://lcomet.github.io/docskioptiapck/
   linkml: https://w3id.org/linkml/
   schema: http://schema.org/
   owl: http://www.w3.org/2002/07/owl#
@@ -45,14 +45,14 @@ classes:
       - name
       - description
     is_a: Material
-    
+
   Recyclate:
     description: This class contain different sub classes to make additives more specific. In general, there are no instances of this class, but from the subclass(es).
     slots:
       - name
       - description
     is_a: Material
-    
+
   Virgin Material:
     description: Virgin materials are all materials, which contain only one kind of material. You should be able, to describe this material with one chemical structure/molecule.
     slots:
