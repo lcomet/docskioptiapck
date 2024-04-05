@@ -1,5 +1,5 @@
 # Auto generated from kioptipack_schema.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-07-24T16:49:53
+# Generation date: 2023-07-24T16:50:54
 # Schema: kioptipack-schema
 #
 # id: https://lcomet.github.io/docskioptiapck/
